@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-template-columns: 40px auto 40px;
+    grid-template-areas: "menu brand chatbot";
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 80px;
+    color: #fff; 
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.menu {
+    grid-area: menu;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}   
+.brand img {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+.brand {
+    grid-area: brand;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}    
+
+.chatbot {
+    grid-area: chatbot;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.search input {
+    width: 300px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #111;
+}
+
+.search button:active {
+    transform: scale(0.98);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 320px 320px 550px;
+    grid-template-rows: 380px 60px 60px;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "chart chart table-area"
+        "USD prediction table-area"
+        "ZAR prediction table-area";
+    margin-bottom: 30px;
+}
+
+.chart {
+    grid-area: chart;
+}
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.table-area {
+    grid-area: table-area;
+}
+
+.prediction {
+    grid-area: prediction;
+}
+
+.USD {
+    grid-area: USD;
+}
+
+.ZAR {
+    grid-area: ZAR;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.table-container {
+    overflow-y: scroll;
+    padding: 10px;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #000;
+    width: 100%;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
