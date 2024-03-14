@@ -95,7 +95,8 @@ header {
 
 .container {
     display: flex;
-    width: 850px;
+    flex-firection: column;
+    width: 650px;
     gap: 1rem;
     
 }
