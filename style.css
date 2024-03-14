@@ -95,14 +95,12 @@ header {
 
 .container {
     display: grid;
-    grid-template-columns: 320px 320px 550px;
-    grid-template-rows: 380px 60px 60px;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 1000px;
     gap: 10px 10px;
     grid-auto-flow: row;
     grid-template-areas:
-        "chart chart table-area"
-        "chart chart table-area"
-        "chart chart table-area";
+        "chart table-area";
     margin-bottom: 30px;
 }
 
