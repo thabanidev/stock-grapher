@@ -20,7 +20,7 @@ header {
     top: 0;
     display: grid;
     grid-template-columns: 40px auto 40px;
-    grid-template-areas: "brand";
+    grid-template-areas: "item brand item";
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
